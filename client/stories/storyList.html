@@ -1,0 +1,13 @@
+<template name="storyList">
+  <div class="story">
+    {{#each stories}}
+      {{> storyItem}}
+    {{/each}}
+  </div>
+
+<hr/>
+	<div>
+	story count: {{ storyCount }}
+	</div>
+
+</template>

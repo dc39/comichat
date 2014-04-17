@@ -1,0 +1,22 @@
+TODO
+
+data format/editor
+	app/form?
+	google doc?
+	yaml loader?
+
+dialog engine
+	click through responses
+	comic chat
+	character responses
+
+adventure module
+	inventory
+	giving/getting items
+
+
+modal popup dialog
+
+grammar database list
+
+main menu

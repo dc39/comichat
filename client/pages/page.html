@@ -1,0 +1,18 @@
+<template name="page">
+
+<div>
+params:{{params.storyName}}
+</div>
+
+	<div class="panel">
+		{{#each panels}}
+			{{> dynamicTemplate name=this.tpl data=this}}
+		{{/each}}
+	</div>
+
+	<hr/>
+	<div>
+		story count: {{ storyCount }}
+	</div>
+
+</template>

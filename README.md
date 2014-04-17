@@ -1,4 +1,4 @@
-comichat
-========
-comical chat engine
-using meteor and famo.us
+mechat
+======
+
+chat with meteor

@@ -26,6 +26,7 @@ resetData = function() {
             story: 'berlin',
             page: 'cover',
             tpl: 'image',
+            size: [200, 200],
             src: "/images/comics/berlin/actors/dieter/prompt.png",
         },
 
@@ -49,6 +50,7 @@ resetData = function() {
             page: 'greeting',
             tpl: 'bubble',
             text: "You made it, finally!",
+            size: [200, 200]
         },
 
         {

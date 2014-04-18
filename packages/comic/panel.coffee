@@ -1,5 +1,9 @@
 Panel = {}
 
+defVal = (obj, defs) ->
+  console.log('defs', obj, defs)
+  return(obj or defs)
+
 makeDiv = (obj, kls) ->
   div = "<span class='#{kls}'>#{obj.text}</span>"
   div
@@ -92,13 +96,12 @@ Panel.imx = (obj, rc) ->
   panel
 
 Panel.image = (obj, rc) ->
-  html = "<img src='" + obj.src + "' />"
+  size = defVal(obj.size, [100, 100])
+  console.log('size', size)
+  html = "<img src='#{obj.src}' width='#{size[0]}' height='#{size[1]}' />"
   panel = new Fam.Surface(
     content: html
-    size: [
-      100
-      undefined
-    ]
+    size: size
     properties:
       border: "2px solid black"
   )
@@ -106,12 +109,11 @@ Panel.image = (obj, rc) ->
 
 Panel.nextButton = (obj, rc) ->
   html = "<div class='btn'>" + obj.text + "</div>"
+  size = defVal(obj.size, [100, 100])
+  console.log('size', size)
   panel = new Fam.Surface(
     content: html
-    size: [
-      obj.size[0] or 100
-      obj.size.y || 100
-    ]
+    size: size
   )
   panel.on "click", ->
     Router.go obj.url

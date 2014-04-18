@@ -1,6 +1,5 @@
 Panel = {}
 
-
 makeDiv = (obj, kls) ->
   div = "<span class='#{kls}'>#{obj.text}</span>"
   div
@@ -13,31 +12,28 @@ Panel.mover = (obj, rc) ->
   stateModifier.setTransform Fam.Transform.translate(x, y, z),
     duration: 3000
     curve: "easeInOut"
-
   stateModifier
 
+Panel.baseNode = ->
+  n = new Fam.RenderNode()
+  n
+
+Panel.makeNode = (obj, view) ->
+  console.log("makeNode #{obj.tpl}")
+  surf = Panel[obj.tpl](obj)
+  node = new Fam.RenderNode()
+  node.add(surf)
+  node
 
 Panel.caption = (obj, rc) ->
-  # console.log('new caption');
   panel = new Fam.Surface(
     content: makeDiv(obj, "caption")
-    size: [
-      true
-      true
-    ]
+    size: [600, true]
   )
-  
-  # properties: {
-  #     backgroundColor: '#000',
-  #     color: 'white',
-  #     textAlign: 'center',
-  #     borderRadius: 10,
-  #     fontSize: 30
-  # }
-  mover = Panel.mover(obj)
-  rc.add(mover).add panel
-  panel
-
+  return panel
+  # mover = Panel.mover(obj)
+  # mover.add(panel)
+  # mover
 
 Panel.bubble = (obj, rc) ->
   panel = new Fam.Surface(
@@ -84,7 +80,7 @@ Panel.textButton = (obj, rc) ->
 
 
 Panel.imx = (obj, rc) ->
-  
+
   # console.log("image:", obj.src);
   panel = new Fam.ImageSurface({})
   panel.setContent obj.src
@@ -98,7 +94,7 @@ Panel.imx = (obj, rc) ->
 
 Panel.image = (obj, rc) ->
   html = "<img src='" + obj.src + "' />"
-  
+
   # console.log(html);
   panel = new Fam.Surface(
     content: html

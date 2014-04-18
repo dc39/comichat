@@ -4,16 +4,18 @@ Comic.pagePanels = []
 
 Meteor.startup ->
   Fam =
-    StateModifier: require("famous/modifiers/StateModifier")
-    Surface: require("famous/core/Surface")
-    ImageSurface: require("famous/surfaces/ImageSurface")
-    Engine: require("famous/core/Engine")
-    Modifier: require("famous/core/Modifier")
-    RenderController: require("famous/views/RenderController")
-    Scrollview: require("famous/views/Scrollview")
-    RenderNode: require("famous/core/RenderNode")
-    Transform: require("famous/core/Transform")
-    Entity: require("famous/core/Entity")
+    Engine:             require("famous/core/Engine")
+    Entity:             require("famous/core/Entity")
+    ImageSurface:       require("famous/surfaces/ImageSurface")
+    Modifier:           require("famous/core/Modifier")
+    RenderController:   require("famous/views/RenderController")
+    RenderNode:         require("famous/core/RenderNode")
+    Scrollview:         require("famous/views/Scrollview")
+    StateModifier:      require("famous/modifiers/StateModifier")
+    Surface:            require("famous/core/Surface")
+    Transform:          require("famous/core/Transform")
+    Transitionable:     require("famous/transitions/Transitionable")
+    TweenTransition:    require("famous/transitions/TweenTransition")
 
   return
 
@@ -29,11 +31,14 @@ Comic.page = (panelData) ->
   Comic.view = new Fam.Scrollview()
   console.log('created view', Comic.view)
   viewNodes = []
-  panelData = panelData.slice(0,2)
+  # panelData = panelData.slice(0,2)
+
+  Comic.view.sequenceFrom(viewNodes)
+    
   panelData.forEach (pData) ->
     viewNodes.push(Panel.makeNode(pData))
 
-  Comic.view.sequenceFrom(viewNodes)
+
   Comic.renderController.show Comic.view # can only show one
   Comic.mainContext.add Comic.renderController
   return

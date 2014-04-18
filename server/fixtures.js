@@ -9,7 +9,8 @@ resetData = function() {
             page: 'cover',
             tpl: 'caption',
             text: 'It had been a long journey',
-            mx: 150
+            p1: [50, 100],
+            p2: [80, 100]
         },
 
         {
@@ -17,7 +18,8 @@ resetData = function() {
             page: 'cover',
             tpl: 'caption',
             text: "but now you'd arrived in Berlin.",
-            mx: 200
+            p1: [60, 200],
+            p2: [90, 200]
         },
 
         {
@@ -25,7 +27,6 @@ resetData = function() {
             page: 'cover',
             tpl: 'image',
             src: "/images/comics/berlin/actors/dieter/prompt.png",
-            mx: 200
         },
 
         {
@@ -33,7 +34,6 @@ resetData = function() {
             page: 'cover',
             tpl: 'bubble',
             text: "how was your trip?",
-            mx: 200
         },
 
         {
@@ -42,7 +42,6 @@ resetData = function() {
             tpl: 'nextButton',
             text: "say hi",
             url: '/comics/berlin/greeting',
-            mx: 300
         },
 
         {
@@ -50,7 +49,6 @@ resetData = function() {
             page: 'greeting',
             tpl: 'bubble',
             text: "You made it, finally!",
-            mx: 200
         },
 
         {
@@ -58,7 +56,6 @@ resetData = function() {
             page: 'greeting',
             tpl: 'image',
             src: "/images/comics/berlin/actors/dieter/prompt.png",
-            mx: 200
         },
 
 

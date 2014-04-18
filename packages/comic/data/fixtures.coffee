@@ -15,8 +15,8 @@ panelData = [
 		page: "cover"
 		tpl: "caption"
 		text: "It had been a long journey"
-		pos1: [10,10]
-		pos2: [20,10]
+		pos1: [ 0,10]
+		pos2: [10,10]
 	}
 
 	{
@@ -41,17 +41,22 @@ panelData = [
 	## greeting
 
 	{
-		story: "berlin"
-		page: "greeting"
-		tpl: "image"
+		tpl: "insetImage"
 		src: "/images/comics/berlin/actors/dieter/prompt.png"
+		# pos1: [20, 20]
+		pos1: [1, 2]
+		size: [50, 50]
+		page: "greeting"
+		story: "berlin"
 	}
 
 	{
-		story: "berlin"
-		page: "greeting"
 		tpl: "bubble"
+		pos1: [70,30]
+		pos2: [40,30]
 		text: "how was your trip?"
+		page: "greeting"
+		story: "berlin", 
 	}
 
 

@@ -1,15 +1,19 @@
 .caption {
 	background-color: black;
 	color: white;
-	font-size: 25px;
+	font-size: 5vw;;
 	padding: 12px;
 	border-radius: 5px;
 	line-height: 50px;
 }
 
 .bubble {
-	border: 1px solid black;
-	border-radius: 5px;
+	border-radius: 4vw;
+	border: 2px solid black;
+	font-size: 5vw;
+	line-height: 8vw;
+	padding: 2vw;
+	background-color: white;
 }
 
 .nextButton {
@@ -19,5 +23,10 @@
 	padding: 12px;
 	border-radius: 5px;
 	line-height: 50px;	
+	cursor: pointer;
 }
 
+.insetImage {
+	/*position: absolute;*/
+	/*border: 2px solid red;*/
+}

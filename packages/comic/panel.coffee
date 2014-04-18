@@ -124,12 +124,12 @@ Panel.insetImage = (obj) ->
 
 
 Panel.nextButton = (obj) ->
-	# html = "<div class='btn'>#{obj.text}</div>"
 	panel = new Fam.Surface(
 		content: obj.text
-		size: obj.size or [100,true]
+		size: obj.size or [true,true]
 	)
-	panel.addClass('nextButton')
+	obj.pos1 = obj.pos1 or [70,70]
+	obj.pos2 = obj.pos2 or [70,70]
 	panel.on "click", ->
 		Router.go obj.url
 		return

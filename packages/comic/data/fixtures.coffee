@@ -16,7 +16,7 @@ panelData = [
 		tpl: "caption"
 		text: "It had been a long journey"
 		pos1: [ 0,10]
-		pos2: [10,10]
+		pos2: [ 5,10]
 	}
 
 	{
@@ -24,18 +24,16 @@ panelData = [
 		page: "cover"
 		tpl: "caption"
 		text: "but now you'd arrived in Berlin."
-		pos1: [10, 20]
-		pos2: [30, 20]
+		pos1: [ 0, 20]
+		pos2: [10, 20]
 	}
 
 	{
 		story: "berlin"
 		page: "cover"
 		tpl: "nextButton"
-		text: "say hi"
+		text: "next"
 		url: "/comics/berlin/greeting"
-		pos1: [70,70]
-		pos2: [70,70]
 	}
 
 	## greeting

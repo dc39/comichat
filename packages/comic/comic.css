@@ -8,8 +8,8 @@
 }
 
 .bubble {
-	border-radius: 4vw;
 	border: 2px solid black;
+	border-radius: 4vw;
 	font-size: 5vw;
 	line-height: 8vw;
 	padding: 2vw;
@@ -17,12 +17,11 @@
 }
 
 .nextButton {
-	background-color: green;
-	color: white;
-	font-size: 25px;
-	padding: 12px;
-	border-radius: 5px;
-	line-height: 50px;	
+	background-color: #8F8;
+	color: black;
+	border-radius: 2vw;
+	font-size: 5vw;
+	padding: 4vw;
 	cursor: pointer;
 }
 

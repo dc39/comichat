@@ -11,6 +11,7 @@ Meteor.startup ->
     RenderController:   require("famous/views/RenderController")
     RenderNode:         require("famous/core/RenderNode")
     Scrollview:         require("famous/views/Scrollview")
+    View:               require("famous/core/View")
     StateModifier:      require("famous/modifiers/StateModifier")
     Surface:            require("famous/core/Surface")
     Transform:          require("famous/core/Transform")
@@ -28,16 +29,19 @@ Comic.init = ->
 
 Comic.page = (panelData) ->
   Comic.init()  unless Comic.mainContext
-  Comic.view = new Fam.Scrollview()
-  console.log('created view', Comic.view)
+  Comic.view = new Fam.View()
   viewNodes = []
   # panelData = panelData.slice(0,2)
 
-  Comic.view.sequenceFrom(viewNodes)
+  # Comic.view.sequenceFrom(viewNodes)
     
   panelData.forEach (pData) ->
-    viewNodes.push(Panel.makeNode(pData))
-
+    node = Panel.makeNode(pData)
+    viewNodes.push(node)
+    org = new Fam.Modifier(
+      origin: [0, 0]
+    )
+    Comic.view._add(org).add(node)
 
   Comic.renderController.show Comic.view # can only show one
   Comic.mainContext.add Comic.renderController

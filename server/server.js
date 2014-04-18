@@ -1,11 +1,11 @@
 Meteor.methods({
     resetData: function() {
         console.log('Meteor.methods.resetData');
-        resetData();
+        LoadComicData();
         return ('reset done');
     }
 })
 
 Meteor.startup(function() {
-  resetData();
+    LoadComicData();
 })

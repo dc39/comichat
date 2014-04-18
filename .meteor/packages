@@ -8,5 +8,7 @@ insecure
 bootstrap
 iron-router
 famono
-comic
 coffeescript
+comic
+mockout
+jade

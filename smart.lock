@@ -3,7 +3,8 @@
   "dependencies": {
     "basePackages": {
       "iron-router": {},
-      "famono": {}
+      "famono": {},
+      "jade": {}
     },
     "packages": {
       "iron-router": {
@@ -15,6 +16,11 @@
         "git": "https://github.com/raix/Meteor-famono.git",
         "tag": "v0.0.23",
         "commit": "1cf3d340aa63497b29f48fd9510c11aaae810e30"
+      },
+      "jade": {
+        "git": "https://github.com/mquandalle/meteor-jade.git",
+        "tag": "v0.2.1",
+        "commit": "969fc3dd0adbb15304e3e13c3e27260398d89503"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

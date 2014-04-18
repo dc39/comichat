@@ -1,22 +1,33 @@
 TODO
 
-data format/editor
-	app/form?
-	google doc?
-	yaml loader?
-
-dialog engine
+chatbot engine
 	click through responses
-	comic chat
-	character responses
+	parser
 
 adventure module
 	inventory
 	giving/getting items
 
+teaching parts
+	modal popup dialog
 
-modal popup dialog
+teaching content
 
 grammar database list
 
 main menu
+
+wireframe/walkthrough
+	placeholders for main features
+
+gameshow
+	multiplayer choice
+	chat popups
+
+
+
+data format/editor
+	coffee!
+	app/form?
+	google doc?
+	yaml loader?

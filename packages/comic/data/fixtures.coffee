@@ -72,39 +72,40 @@ LoadComicData = ->
 
 	# finished panels
 
-	if Pages.find().count() is 0
-		console.log "creating initial pages"
-		pages = [
-			{
-				story: "berlin"
-				page: "cover"
-			}
-			{
-				story: "berlin"
-				page: "bar"
-			}
-		]
-		_.each pages, (page) ->
-			Pages.insert page
-			return
+	console.log "creating initial pages"
+	pages = [
+		{
+			story: "berlin"
+			page: "cover"
+		}
+		{
+			story: "berlin"
+			page: "bar"
+		}
+	]
+	Pages.remove {}	
+	_.each pages, (page) ->
+		Pages.insert page
+		return
 
-	if Stories.find().count() is 0
-		console.log "creating initial stories"
-		Stories.insert
-			title: "The Berlin Bar"
-			cname: "berlin"
-			url: "/stories/berlin"
-			description: "a secret bar in Berlin"
 
-		Stories.insert
-			title: "The Letter"
-			cname: "letter"
-			url: "stories/letter"
-			description: "A letter. what does it mean?"
+	console.log "creating initial stories"
+	Stories.remove {}
+	Stories.insert
+		title: "The Berlin Bar"
+		cname: "berlin"
+		url: "/stories/berlin"
+		description: "a secret bar in Berlin"
 
-		Stories.insert
-			title: "Runaway train"
-			cname: "train"
-			url: "stories/runaway"
-			description: "your journey takes a sudden twist"
+	# Stories.insert
+	# 	title: "The Letter"
+	# 	cname: "letter"
+	# 	url: "stories/letter"
+	# 	description: "A letter. what does it mean?"
+
+	# Stories.insert
+	# 	title: "Runaway train"
+	# 	cname: "train"
+	# 	url: "stories/runaway"
+	# 	description: "your journey takes a sudden twist"
 

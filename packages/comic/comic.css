@@ -5,6 +5,7 @@
 	padding: 12px;
 	border-radius: 5px;
 	line-height: 50px;
+	z-index: 20;
 }
 
 .bubble {
@@ -23,6 +24,7 @@
 	font-size: 5vw;
 	padding: 4vw;
 	cursor: pointer;
+	z-index: 20;
 }
 
 .insetImage {

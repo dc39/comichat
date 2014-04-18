@@ -24,6 +24,7 @@ gameshow
 	multiplayer choice
 	chat popups
 
+facebook login
 
 
 data format/editor

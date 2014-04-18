@@ -36,6 +36,8 @@ panelData = [
 		url: "/comics/berlin/greeting"
 	}
 
+
+
 	## greeting
 
 	{
@@ -55,6 +57,14 @@ panelData = [
 		text: "how was your trip?"
 		page: "greeting"
 		story: "berlin", 
+	}
+
+	{
+		story: "berlin"
+		page: "greeting"
+		tpl: "backButton"
+		text: "back"
+		url: "/comics/berlin/cover"
 	}
 
 
